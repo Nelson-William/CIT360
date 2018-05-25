@@ -17,6 +17,7 @@ public class AgeModel {
     /*The purpose of the Model is to house the functions needed to use the data.*/
 	
 	private int currentAge;
+        
 	
 	    public static void main(String[] args){
             //Convert to Java date format

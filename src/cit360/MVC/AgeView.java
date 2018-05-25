@@ -16,6 +16,10 @@ import java.util.Date;
 
 
 public class AgeView {
+    
+    private String userAge;
+    
+    
 	
         public static void main(String[] args){
             //get input
@@ -23,9 +27,13 @@ public class AgeView {
             System.out.println("Enter date of birth (DD-MM-YYYY)");
             String dob=sc.next();
             
-            //need getters and setters to access dob string outside of this class.
-            
-            System.out.println("You are currently "+currentAge" years old.");
+                  
+        }
+        public String getUserAge(){
+            return userAge;
+        }
+        public String setUserAge(String age){
+            this.userAge = age;
         }
 
 }
