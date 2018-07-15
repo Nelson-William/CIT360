@@ -12,8 +12,8 @@ import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Sandbox
- * @author willnelson
+ * Sandboxed
+ * 
  */
 public class Threading {
     
