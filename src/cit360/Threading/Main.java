@@ -5,8 +5,6 @@
  */
 package cit360.Threading;
 
-import java.util.concurrent.Executors;
-
 /**
  *
  * @author willnelson
@@ -18,20 +16,14 @@ public class Main {
             System.out.println(account.toString());
             
         
-            Thread testThreadOne = new Thread(new Runnable() {
-            	@Override
-            	public void run() {				
-            		account.deposit(10);
-            		account.withdraw(35);
-            	}
+            Thread testThreadOne = new Thread(() -> {
+                account.deposit(10);
+                account.withdraw(35);
             });
 
-            Thread testThreadTwo = new Thread(new Runnable() {
-		@Override
-		public void run() {
-			account.deposit(12);
-			account.withdraw(65);
-		}
+            Thread testThreadTwo = new Thread(() -> {
+                account.deposit(12);
+                account.withdraw(65);
             });		
 		
 		
