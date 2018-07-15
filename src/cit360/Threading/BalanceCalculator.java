@@ -5,7 +5,8 @@
  */
 package cit360.Threading;
 
-/**
+/**Threading is a feature in Java that allows for multiple lines to be executed
+ * at the same time.  Each part of a program is referred to as a thread.
  *
  * @author willnelson
  */
@@ -20,15 +21,15 @@ public class BalanceCalculator {
 		this.balance = startingBalance;
 	}
 	
-	// synchronized makes these methods thread safe.
+	// synchronized in Java prevents multiple threads from running at the same time
 	public synchronized void deposit(double amount) {
 		balance += amount;
-		System.out.println("Balance after deposit: " + this.balance);
+		System.out.println("Your new balance is: " + this.balance);
 	}
 	
 	public synchronized void withdraw(double amount) {
 		balance -= amount;
-		System.out.println("Balance after withdrawal: " + this.balance);
+		System.out.println("Your remaining balance is: " + this.balance);
 	}
         
         public String getAccount() {

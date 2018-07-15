@@ -5,6 +5,8 @@
  */
 package cit360.Threading;
 
+import java.util.concurrent.Executors;
+
 /**
  *
  * @author willnelson
@@ -12,29 +14,32 @@ package cit360.Threading;
 public class Main {
     
         public static void main(String[] args) {
-            final BalanceCalculator account = new BalanceCalculator("1234-5678-1234-5678", 1000.00);
+            final BalanceCalculator account = new BalanceCalculator("8675309", 1000.00);
             System.out.println(account.toString());
             
         
-            // These are threads creating runnables
-            Thread trThread1 = new Thread(new Runnable() {
+            Thread testThreadOne = new Thread(new Runnable() {
             	@Override
             	public void run() {				
-            		account.deposit(150);
-            		account.withdraw(25);
+            		account.deposit(10);
+            		account.withdraw(35);
             	}
             });
 
-            Thread trThread2 = new Thread(new Runnable() {
+            Thread testThreadTwo = new Thread(new Runnable() {
 		@Override
 		public void run() {
-			account.deposit(225);
-			account.withdraw(75.75);
+			account.deposit(12);
+			account.withdraw(65);
 		}
             });		
 		
 		
-	trThread1.start();
-	trThread2.start();
+	testThreadOne.start();
+	testThreadTwo.start();
     
+        }
+        
+       // public static void timeout(){
+            
 }
