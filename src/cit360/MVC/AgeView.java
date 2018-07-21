@@ -41,7 +41,7 @@ public class AgeView {
         }
 
     void setVisible(boolean b) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        throw new UnsupportedOperationException("This doesn't do anything yet.");
     }
 
 }
