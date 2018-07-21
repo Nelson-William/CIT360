@@ -5,9 +5,7 @@
  */
 package cit360.MVC;
 
-import java.text.SimpleDateFormat;
 import java.util.Scanner;
-import java.util.Date;
 
 /**
  *
@@ -17,23 +15,33 @@ import java.util.Date;
 
 public class AgeView {
     
-    private String userAge;
+    private int firstNumber;
+    private int secondNumber;
     
     
 	
         public static void main(String[] args){
             //get input
-            Scanner sc=new Scanner(System.in);
-            System.out.println("Enter date of birth (DD-MM-YYYY)");
-            String dob=sc.next();
+            Scanner sc = new Scanner(System.in);
+            System.out.println("What year were you born?");
+            int firstNumber = sc.nextInt();
+            System.out.println("What is the current year?");
+            int secondNumber = sc.nextInt();
             
                   
         }
-        public String getUserAge(){
-            return userAge;
+        public int getFirstNumber(){
+            return firstNumber;
         }
-        public String setUserAge(String age){
-            this.userAge = age;
+        public int getSecondNumber(){
+            return secondNumber;
         }
+        void displayErrorMessage(String errorMessage){
+            System.out.println("there was an error.");
+        }
+
+    void setVisible(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
 
 }

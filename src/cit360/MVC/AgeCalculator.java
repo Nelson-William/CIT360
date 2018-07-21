@@ -10,15 +10,14 @@ package cit360.MVC;
  * @author willnelson
  */
 public class AgeCalculator {
+    
+    public static void main(String[] args){
    	
-	private AgeView theView;
-	private AgeModel theModel;
+	AgeView view = new AgeView();
+        AgeModel model = new AgeModel();
+        AgeController controller = new AgeController(view,model);
 	
-	public AgeCalculator(AgeView theView, AgeModel theModel) {
-		this.theView = theView;
-		this.theModel = theModel;
-				
-			new AgeView().setVisible(true);
+	view.setVisible(true);
 	}
 
 }

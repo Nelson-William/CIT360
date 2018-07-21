@@ -17,8 +17,15 @@ public class AgeModel {
     /*The purpose of the Model is to house the functions needed to use the data.*/
 	
 	private int currentAge;
+        //Simple Age Calculator
+        public void doCalc(int firstNumber, int secondNumber){
+            currentAge = secondNumber - firstNumber;
+        }
+        public int getCalculationValue(){
+            return currentAge;
+        }
         
-	
+	/*  Specific Age Calculator
 	    public static void main(String[] args){
             //Convert to Java date format
             SimpleDateFormat sdf1=new SimpleDateFormat("dd-mm-yyyy");
@@ -31,4 +38,5 @@ public class AgeModel {
             long ms=System.currentTimeMillis()-ndob.getTime();
             long currentAge=(long)((long)ms/(1000.0*60*24*365));
             }
+*/
 }
