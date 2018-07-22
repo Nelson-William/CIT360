@@ -12,7 +12,8 @@ package ACP;
 public class Withdraw implements BankingInterface{
     
     public double bank(double balance, double amount) {
-		System.out.println("You have withdrawn $" + amount + ". Thank you.");
+		System.out.println("You have withdrawn $" + amount + ".");
+                System.out.println("Don't spend it all in one place.");
 		return balance-amount;
 	}
     

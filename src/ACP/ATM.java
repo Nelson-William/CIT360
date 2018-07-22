@@ -17,7 +17,7 @@ public class ATM {
 
 		Scanner input = new Scanner(System.in);
 		Controller bank = new Controller();
-		double balance = (int)((Math.random() * 1000) + 100);
+		double balance = (int)((Math.random() * 101) + 67);
 		double amount;
 		String request;
 		//Simplified menu to reduce user input
@@ -40,19 +40,19 @@ public class ATM {
 					break;
 					
 				case "W":
-					System.out.println("Please enter the amount you want to withdraw:");
+					System.out.println("Please enter the withdrawal amount:");
 					amount = Integer.parseInt(input.nextLine());
                                         System.out.println("That is going to hurt....");
 					balance = bank.handleRequest(request, balance, amount);
 					break;
                                 case "D":
-                                        System.out.println("Please enter the amount you want to deposit:");
+                                        System.out.println("Please enter the amount of your deposit:");
                                         amount = Integer.parseInt(input.nextLine());
                                         System.out.println("We will see how long that lasts.");
                                         balance = bank.handleRequest(request, balance, amount);
 				
 				default: 
-					System.out.println("Please enter the letter corresponding to your option.");
+					System.out.println("That input does not correspond to a menu option.");
 					break;			
 			}
 			
@@ -63,7 +63,7 @@ public class ATM {
 			request = input.nextLine();
 		}
 		
-		System.out.println("Thank you for your business. Goodbye.");
+		System.out.println("Thank you for choosing JavaBank.");
 	}
     
 }

@@ -12,7 +12,7 @@ package ACP;
 public class Deposit implements BankingInterface {
     
     public double bank(double balance, double amount) {
-		System.out.println("You have deposited $" + amount + ". Thank you.");
+		System.out.println("You have deposited $" + amount + ".");
 		return balance+amount;
 	}
 }
